@@ -26,13 +26,11 @@
 .searchHistoryBtns {
     width: 100%;
     margin: 4px;
+    background-color: var(--primary-color);
 }
 
 .search-btn {
     margin: auto;
-}
-
-#city-search-btn {
     background-color: var(--secondary-color);
     margin: auto;
 }
