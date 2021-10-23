@@ -1,0 +1,76 @@
+* {
+    padding: 5px;
+}
+
+:root {
+    --primary-color: #1d3c45;
+    --secondary-color: #d2601a;
+    --tertiary-color: #fff1e1;
+}
+
+.column {
+    float: left;
+    width: 12%;
+    padding: 0 10px;
+}
+
+.h2.content-title {
+    font-size: 50px;
+    font-weight: bolder;
+}
+
+.card, .list-group, .list-group-item {
+    background-color: var(--tertiary-color);
+}
+
+.searchHistoryBtns {
+    width: 100%;
+    margin: 4px;
+}
+
+.search-btn {
+    margin: auto;
+}
+
+#city-search-btn {
+    background-color: var(--secondary-color);
+    margin: auto;
+}
+
+#city-search-btn:hover {
+    opacity: 1;
+}
+
+.weather-now {
+    font-size: 20px;
+}
+
+header {
+    border-bottom: 5px solid var(--primary-color);
+    width: auto;
+    text-align: center;
+    margin: 0 auto 25px auto;
+    background-color: var(--secondary-color);
+}
+
+.lowRiskUVI {
+    background-color: green;
+}
+
+.moderateRiskUVI {
+    background-color: yellow;
+    color: black;
+}
+
+.moderateHighRiskUVI {
+    background-color: orange;
+    color: black
+}
+
+.highRiskUVI {
+    background-color: red;
+}
+
+.extremeRiskUVI {
+    background-color: purple;
+}
