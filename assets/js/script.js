@@ -25,7 +25,6 @@ function queryWeatherData(cityName) {
         return response.json()
     })
     .then(cityData => {
-        console.log(cityData);
         // retrieve the data we need from what was returned from the fetch requests
         const latitude = cityData.coord.lat
         const longitude = cityData.coord.lon
@@ -123,7 +122,6 @@ function displayDailyforecast(fiveDayData) {
 // save search history to load on next visit to website
 function saveSearchHistory(cityName) {
     searchHistory = JSON.parse(localStorage.getItem('searchHistory')) || [];
-    console.log(searchHistory);
 
     if (!searchHistory.includes(cityName)) {
         searchHistory.push(cityName);
@@ -135,7 +133,6 @@ function saveSearchHistory(cityName) {
 // get search history from localStorage
 function getSearchHistory() {
     let searchHistory = JSON.parse(localStorage.getItem('searchHistory')) || [];
-    console.log(searchHistory);
 
     // clear SH buttons of any content they have
     $('#searchHistoryBtns').empty();
@@ -164,10 +161,7 @@ citySearchFormEl.addEventListener('submit', formSubmitHandler);
 // Search city weather data when a city search button is clicked
 $(document).on('click', '.searchHistoryBtns', function(onClick) {
     onClick.preventDefault();
-    console.log(this.textContent);
     this.value = '';
-    console.log(this);
-    console.log(this.textContent);
     const displayClickedCity = this.textContent;
     queryWeatherData(displayClickedCity);
 });
